@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+	<head>
+		<?php include_once '../config/configuracao.php'; # Vai facilitar na hora de escrever as tags css, js , entre outras ?>
+		<?php
+			if (isset($_GET['id'])) {
+				$id = $_GET['id'];
+				$consulta_produto = mysqli_query($con,"SELECT * FROM produto JOIN marca ON marca.idMarca = produto.codMarca JOIN categoria_produto ON categoria_produto.codProduto = produto.idProduto JOIN categoria ON categoria.idCategora = categoria_produto.codCategoria WHERE idProduto = '$id' ");
+				$num = mysqli_num_rows($consulta_produto);
+				if ($num == 0) {
+					header("Location: ../");
+				}
+				if ($produto_row = mysqli_fetch_assoc($consulta_produto)) {
+					$img_produto = $produto_row['imagemDestagada'];
+				}
+			}else{
+				header("Location: ../");
+			}
+		?>
+		<title><?php echo  $_SESSION['titulo']; ?></title>
+		<script type="text/javascript" src="<?php echo $url_caminho ?>/theme/js/carregar-itens.js"></script>
+	</head>
+	<body>
+		
+		<?php
+			include_once '../config/menu-fixed.php';
+			include_once '../config/menu-header.php';
+		?>
+
+		<div id="page" class="container-fluid">
+			<div class="produto mostra-produto row col-md-12">
+				<div class="col-md-12 row justify-content-center">
+					<div class="row col-md-10 justify-content-center produto-selecionado">
+						<div class="col-md-9 row" style="border:1px solid;">
+							<div class="img-1 col-md-3 row">
+								<div class="img col-md-12">
+									<img src="<?php echo $url_host; ?>/theme/img/produto/<?php echo $img_produto; ?>">
+								</div>
+							</div>
+							<div class=" informacoes-produto-list row col-md-7 ">
+								<div class="col-md-12">
+									<p class="text-center title"><?php echo $produto_row['nomeProduto'] ?></p>
+									<div class="col-md-12">
+										<?php echo substr($produto_row['descricaoProduto'], 0,145)  ?>...<br>
+										<a href="#mais" class="text-decoration">Informações do Produto</a>
+									</div>
+									<div class="col-md-12 row">
+										<?php $avalicao_geral = mysqli_query($con,"SELECT * FROM `avaliacao` JOIN estrelas on estrelas.idEstrelas = avaliacao.codEstrela JOIN produto on produto.idProduto = avaliacao.codProduto WHERE codProduto = '$id' ");  ?>
+										<div class="col-md-6 margin-top-15">
+											<div class="rows " style="">
+												<span class="icon fa fa-star-o"></span> Avaliações: 
+												<span id="estrela-numer"><?php echo mysqli_num_rows($avalicao_geral); ?></span>
+												
+											</div>
+										</div>
+										<div class="col-md-5 margin-top-15">
+											<span class="icon fa fa-heart-o"></span>
+										</div>
+										<!-- <span class="icon fa fa-heart-o"></span> -->
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 row" style="border:1px solid; padding: 8px;">
+							<div class="col-md-12 row"></div>
+						</div>
+					</div>
+					<div id="mais"></div>
+				</div>
+			</div>
+		</div>
+
+		<?php include_once '../config/footer.php' ?>
+	</body>
+</html>

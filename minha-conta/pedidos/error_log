@@ -1,0 +1,1 @@
+[13-Jan-2022 14:32:24 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, bool given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
