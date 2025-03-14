@@ -1,7 +1,0 @@
-[13-Jan-2022 14:32:21 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
-[13-Jan-2022 14:50:12 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
-[13-Jan-2022 15:54:27 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
-[13-Jan-2022 15:55:17 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
-[13-Jan-2022 15:55:25 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
-[13-Jan-2022 15:55:31 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
-[13-Jan-2022 16:04:02 America/Fortaleza] PHP Warning:  mysqli_fetch_assoc() expects parameter 1 to be mysqli_result, null given in /home4/henssl03/public_html/loja/loja/minha-conta/mods/pedido_atual.php on line 7
