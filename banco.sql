@@ -5955,7 +5955,7 @@ CREATE TABLE `modopagamento` (
 --
 
 INSERT INTO `modopagamento` (`idModoPagamento`, `codCarrinho`, `boleto`, `pix`, `nomeImpresso`, `numeroCartao`, `cvv`, `validadeCartao`, `numeroParcelas`, `value`) VALUES
-(1, 4, NULL, NULL, 'Andre Gustavo henssler', '1478 3698 2584 0012', '147', '1/2023', 1, 'R$ 1255'),
+(1, 4, NULL, NULL, 'Andre', '1478 3698 2584 0012', '147', '1/2023', 1, 'R$ 1255'),
 (2, 5, NULL, NULL, 'Andre', '1472 5874 3998 1024', '125', '1/2023', 1, 'R$ 1327.5');
 
 -- --------------------------------------------------------
