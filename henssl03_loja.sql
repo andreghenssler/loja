@@ -5815,8 +5815,8 @@ CREATE TABLE `endereco` (
 --
 
 INSERT INTO `endereco` (`idEndereco`, `codUsuario`, `rua`, `numero`, `complemento`, `bairro`, `principal`, `codCidade`) VALUES
-(1, 1, 'Avenida Taquara', 802, '2', 'Centro', 1, 4151),
-(2, 1, 'Rua Guarú', 11, '', 'Nova Parobé', 2, 4151);
+(1, 1, 'Taquara', 807, '2', 'Centro', 1, 451),
+(2, 1, 'Rua Guarú', 1, '', 'Nova', 2, 417);
 
 -- --------------------------------------------------------
 
@@ -6111,8 +6111,6 @@ CREATE TABLE `usuario` (
 -- Despejando dados para a tabela `usuario`
 --
 
-INSERT INTO `usuario` (`idUsuario`, `nomePessoa`, `sobrenome`, `cpf`, `email`, `senha`, `celular`, `telefone`, `codGenero`, `nascimento`) VALUES
-(1, 'André Gustavo Henssler  ', '', '030.257.150-73', 'andrehenssler10@gmail.com', 'b8544a72b8fb36beea7c45f6a1fe1ef9', '(51) 99526-2803', '', 1, '2001-08-27');
 
 --
 -- Índices para tabelas despejadas
